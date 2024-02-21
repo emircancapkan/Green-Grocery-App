@@ -60,7 +60,7 @@ The application provides different interfaces for customers, carriers, and the o
 
 ## How to Run the Application
 
-1. Clone the repository: `git clone <[repository_url](https://github.com/celebibasar/CMPE343-Project-3.git)>`
+1. Clone the repository: `git clone <[repository_url](https://github.com/emircancapkan/CMPE343-Project-3.git)>`
 2. Navigate to the project directory: `cd CMPE343-Project-3`
 3. Compile and run the application: `javac App.java && java App`
 
