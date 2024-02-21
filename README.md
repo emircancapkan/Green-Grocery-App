@@ -71,6 +71,13 @@ The technical report for this application includes:
 - Screenshots of each interface
 - UML class diagram representing the project structure
 
+## Contributors
+
+- [Emircan Çapkan](https://github.com/emircancapkan)
+- [Başar Çelebi](https://github.com/celebibasar)
+- [Umut Aytuğ Semerci](https://github.com/uaytug)
+- [Göktuğ Ateş](https://github.com/goktugates)
+  
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
