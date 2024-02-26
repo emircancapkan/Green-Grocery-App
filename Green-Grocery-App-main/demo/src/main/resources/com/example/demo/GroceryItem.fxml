@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.GroceryItemController">
+    <style>
+        .item-container {
+        -fx-spacing: 10;
+        -fx-padding: 10;
+        -fx-border-color: #ccc;
+        -fx-border-width: 1;
+        }
+
+        .item-image {
+        -fx-fit-width: 50;
+        -fx-fit-height: 50;
+        }
+
+        .item-details {
+        -fx-alignment: CENTER_LEFT;
+        }
+
+        .quantity-button {
+        -fx-min-width: 30;
+        }
+
+    </style>
+
+    <HBox alignment="CENTER" prefHeight="54.0" prefWidth="189.0" styleClass="item-container">
+        <ImageView fx:id="itemImageView" styleClass="item-image" />
+        <VBox alignment="CENTER" styleClass="item-details">
+            <Label fx:id="itemNameLabel" />
+            <Label fx:id="itemPriceLabel" />
+            <HBox>
+                <Button onAction="#decreaseQuantity" styleClass="quantity-button" text="-" />
+                <Label fx:id="quantityLabel" />
+                <Button onAction="#increaseQuantity" styleClass="quantity-button" text="+" />
+            </HBox>
+
+        </VBox>
+      <Button text="Add to Cart" onAction="#handleAddToCart"/>
+    </HBox>
+</VBox>
