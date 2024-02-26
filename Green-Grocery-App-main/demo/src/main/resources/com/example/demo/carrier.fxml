@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="carrierBackground" prefHeight="540.0" prefWidth="960.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.carrierPageController">
+    <children>
+
+                                                              <MenuBar layoutX="658.0" layoutY="33.0" AnchorPane.rightAnchor="238.40000000000003">
+            <Menu text="Order">
+                <MenuItem onAction="#Handlevieworder" text="View Orders" />
+                <MenuItem onAction="#Handleacceptorder" text="Accept Orders" />
+            </Menu>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </MenuBar>
+
+                          <TableView fx:id="OrderTable" layoutX="43.0" layoutY="99.0" prefHeight="414.0" prefWidth="442.0" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="474.4" AnchorPane.topAnchor="98.60000000000002">
+            <columns>
+                <TableColumn fx:id="OrderIdColumn" prefWidth="61.600008964538574" text="Order ID" />
+                <TableColumn fx:id="OrderNameColumn" prefWidth="84.80001831054688" text=" Order Name" />
+                <TableColumn fx:id="TotalPriceColumn" minWidth="0.0" prefWidth="76.0" text="Total Price" />
+                <TableColumn fx:id="OrderDateColumn" minWidth="2.4000244140625" prefWidth="106.40000915527344" text="Order Date" />
+                <TableColumn fx:id="DeliveryDateColumn" prefWidth="109.5999755859375" text="Delivery Date" />
+            </columns>
+        </TableView>
+
+                                <Button layoutX="341.0" layoutY="59.0" onAction="#searchProduct" text="Search" AnchorPane.leftAnchor="340.79999999999995" AnchorPane.rightAnchor="567.2">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+        <TextField fx:id="searchField" layoutX="135.0" layoutY="59.0" prefHeight="26.0" prefWidth="195.0" promptText="Search Product" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="629.5999999999999" />
+
+                                            <DialogPane fx:id="OrderDialogPane" layoutX="522.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="316.0" style="-fx-background-color: none;" AnchorPane.bottomAnchor="32.39999999999998" AnchorPane.rightAnchor="121.60000000000002" AnchorPane.topAnchor="72.19999999999993">
+            <header>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="523.0" prefWidth="338.0">
+                    <children>
+                        <Label layoutX="43.0" layoutY="5.0" text="Order ID" />
+                        <TextField fx:id="OrderIdTextField" layoutX="102.0" layoutY="1.0" />
+                        <TableView fx:id="OrderProductTable" layoutX="21.0" layoutY="108.0" prefHeight="276.0" prefWidth="278.0">
+                            <columns>
+                                <TableColumn fx:id="OrderProductNameColumn" prefWidth="138.4000244140625" text="Product Name" />
+                                <TableColumn fx:id="OrderProductQuantityColumn" prefWidth="76.0" text=" Quantity" />
+                                <TableColumn fx:id="OrderProductPriceColumn" minWidth="8.0" prefWidth="63.2000732421875" text="Price" />
+                            </columns>
+                        </TableView>
+                        <TextField fx:id="OrderNameTextField" layoutX="115.0" layoutY="432.0" />
+                        <Label layoutX="38.0" layoutY="73.0" text="Total Price" />
+                        <TextField fx:id="OrderPriceTextField" layoutX="102.0" layoutY="69.0" />
+                        <TextField fx:id="DeliveryDateTextField" layoutX="115.0" layoutY="394.0" />
+                        <Label layoutX="40.0" layoutY="436.0" text="Delivery Date" />
+                        <TextField fx:id="OrderDateTextField" layoutX="102.0" layoutY="35.0" />
+                        <Label layoutX="46.0" layoutY="398.0" text="Order Date" />
+                        <Label layoutX="27.0" layoutY="39.0" text="Order Name" />
+                        <TextField fx:id="AddressTextField" layoutX="115.0" layoutY="466.0" prefHeight="46.0" prefWidth="195.0" />
+                        <Label layoutX="54.0" layoutY="470.0" text="Address" />
+                    </children>
+                </AnchorPane>
+            </header>
+      </DialogPane>
+        <Button fx:id="acceptproduct" layoutX="719.0" layoutY="601.0" onAction="#acceptProduct" prefHeight="26.0" prefWidth="78.0" text="Accept" AnchorPane.rightAnchor="162.60000000000002">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="viewproduct" layoutX="619.0" layoutY="601.0" onAction="#viewProduct" prefHeight="26.0" prefWidth="78.0" text="View" AnchorPane.rightAnchor="262.6">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="acceptproduct1" layoutX="719.0" layoutY="601.0" onAction="#acceptProduct" prefHeight="26.0" prefWidth="78.0" text="Accept" AnchorPane.rightAnchor="162.60000000000002">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="14.0" layoutY="577.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="72.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+</AnchorPane>
