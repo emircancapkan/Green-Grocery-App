@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="MenuAnchorPane" prefHeight="538.0" prefWidth="688.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.CarrierController">
+    <children>
+      <BorderPane prefHeight="534.0" prefWidth="682.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="538.0" prefWidth="395.0">
+                     <children>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="430.0">
+                           <children>
+                              <Button onAction="#searchProduct" text="Search">
+                                 <HBox.margin>
+                                    <Insets right="20.0" top="50.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField fx:id="searchField" prefHeight="26.0" prefWidth="195.0" promptText="Search Product">
+                                 <HBox.margin>
+                                    <Insets top="50.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="CarrierTable" prefHeight="403.0" prefWidth="638.0">
+                           <columns>
+                              <TableColumn fx:id="CarrierIdColumn" prefWidth="49.600006103515625" text=" ID " />
+                              <TableColumn fx:id="CarrierUsernameColumn" prefWidth="120.79998779296875" text="    Username " />
+                              <TableColumn fx:id="CarrierNameColumn" prefWidth="88.79998779296875" text="Name" />
+                              <TableColumn fx:id="CarrierSurnameColumn" prefWidth="89.60003662109375" text="Surname" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="538.0" prefWidth="214.0">
+                     <children>
+                        <MenuBar prefHeight="26.0" prefWidth="74.0">
+                           <menus>
+                              <Menu text="Carrier">
+                                 <items>
+                                    <MenuItem fx:id="employcarrierMenu" onAction="#Handleemploycarrier" text="Employ Carriers" />
+                                    <MenuItem fx:id="firecarrierMenu" onAction="#Handlefirecarrier" text="Fire Carriers" />
+                                 </items>
+                              </Menu>
+                           </menus>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="50.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MenuBar>
+                        <DialogPane fx:id="CarrierDialogPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="281.0" style="-fx-background-color: none;">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <content>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="208.0" prefWidth="250.0" spacing="20.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="6.0" prefWidth="318.0">
+                                       <children>
+                                          <Label text="Carrier ID" />
+                                          <TextField fx:id="CarrierIdTextField" alignment="CENTER_RIGHT" prefHeight="4.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="60.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="318.0">
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="96.0" text="Carrier Username" />
+                                          <TextField fx:id="CarrierUsernameTextField" prefHeight="4.0" prefWidth="150.0">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="49.0" prefWidth="262.0">
+                                       <children>
+                                          <Label text="Carrier Name" />
+                                          <TextField fx:id="CarrierNameTextField" prefHeight="26.0" prefWidth="146.0">
+                                             <HBox.margin>
+                                                <Insets left="45.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="319.0">
+                                       <children>
+                                          <Label text="Carrier Surname" />
+                                          <TextField fx:id="CarrierSurnameTextField" prefHeight="26.0" prefWidth="143.0">
+                                             <HBox.margin>
+                                                <Insets left="32.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </DialogPane>
+                        <Button fx:id="employcarrier" onAction="#employCarrier" text="Employ">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="firecarrier" onAction="#fireCarrier" text="Fire">
+                           <VBox.margin>
+                              <Insets top="-25.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>
