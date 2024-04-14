@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!-- Diğer import beyanları buraya eklenebilir -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-border-color: white; -fx-border-width: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MyCartPageController">
+    <children>
+      <BorderPane prefHeight="540.0" prefWidth="960.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="91.0" prefWidth="960.0" style="-fx-background-color: #1BA54A; -fx-background-radius: 0 0 20 20;" styleClass="navbar" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/organic_grocery.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button fx:id="home" alignment="CENTER" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="34.0" prefWidth="328.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Home" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleProductsButton" prefHeight="38.0" prefWidth="346.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Products" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/product.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleAboutButton" prefHeight="34.0" prefWidth="341.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="About" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/about.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleContactButton" prefHeight="34.0" prefWidth="338.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Contact" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/mail.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="34.0" prefWidth="358.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Profile" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleProfileButton" text="My Profile" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleAddressButton" text="My Addresses" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMyCartButton" text="My Cart" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMyOrderButton" text="My Order" />
+                     </items>
+                     <HBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </MenuButton>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="62.0" prefWidth="57.0">
+                     <children>
+                        <ImageView fx:id="userImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox id="MyCartBackground" alignment="CENTER" prefHeight="433.0" prefWidth="980.0" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="433.0" prefWidth="584.0">
+                     <children>
+                           <Label text="My Items" textFill="#1acd56">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                           <ListView fx:id="cartListView" prefHeight="300.0" prefWidth="500.0" />
+                     </children>
+                  </VBox>
+                    <VBox alignment="CENTER" prefHeight="433.0" prefWidth="387.0" spacing="10.0">
+                        <HBox spacing="10.0">
+                            <Label text="Total Price: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                            <Label fx:id="totalPriceLabel" />
+                        </HBox>
+                        <HBox spacing="10.0">
+                            <Label text="Delivery Date: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                            <ComboBox fx:id="deliveryDateComboBox" />
+                        </HBox>
+                        <HBox spacing="10.0">
+                            <Label text="Delivery Time: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                            <ComboBox fx:id="deliveryTimeComboBox" />
+                        </HBox>
+                        <HBox spacing="10.0">
+                            <Label text="Choose the delivery address: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                            <ComboBox fx:id="deliveryAddressComboBox" />
+                        </HBox>
+                        <Button alignment="CENTER" onAction="#checkoutButtonClicked" styleClass="mainPageButtons" stylesheets="@styles.css" text="Checkout">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                       <Button alignment="CENTER" onAction="#clearCartButtonClicked" styleClass="mainPageButtons" stylesheets="@styles.css" text="Clear Cart">
+                          <font>
+                             <Font size="18.0" />
+                          </font>
+
+                          <cursor>
+                             <Cursor fx:constant="HAND" />
+                          </cursor>
+                       </Button>
+                       <Button alignment="CENTER" onAction="#handleDeleteButton" styleClass="mainPageButtons" stylesheets="@styles.css" text="Remove Item">
+                          <font>
+                             <Font size="18.0" />
+                          </font>
+
+                          <cursor>
+                             <Cursor fx:constant="HAND" />
+                          </cursor>
+                       </Button>
+                       <Button alignment="CENTER" onAction="#handleDetailsButton" styleClass="mainPageButtons" stylesheets="@styles.css" text="Item Details">
+                          <font>
+                             <Font size="18.0" />
+                          </font>
+
+                          <cursor>
+                             <Cursor fx:constant="HAND" />
+                          </cursor>
+                       </Button>
+                       <Button alignment="CENTER" onAction="#handleEditButton" styleClass="mainPageButtons" stylesheets="@styles.css" text="Edit Item">
+                          <font>
+                             <Font size="18.0" />
+                          </font>
+
+                          <cursor>
+                             <Cursor fx:constant="HAND" />
+                          </cursor>
+                       </Button>
+                    </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="72.0" styleClass="mainPageButtons" stylesheets="@styles.css" text="Logout" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" right="850.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+    </children>
+</AnchorPane>
