@@ -1,0 +1,185 @@
+.grocery-item {
+    /*styles.css*/
+    -fx-spacing: 16;
+    -fx-padding: 10;
+}
+
+.grocery-item ImageView {
+    -fx-fit-height: 60.0;
+    -fx-fit-width: 60.0;
+}
+
+/* styles.css */
+.grocery-item Label {
+    -fx-font-size: 14;
+    -fx-text-overrun: ellipsis;
+    -fx-rotate: 0;
+    -fx-translate-x: 0;
+    -fx-pref-width: 40; /* Tercih edilen genişlik */
+    -fx-min-width: 40; /* Minimum genişlik */
+}
+
+
+/* styles.css */
+.grocery-item .quantity-box {
+    -fx-spacing: 5; /* Butonlar arasındaki boşluk */
+}
+
+.grocery-item .quantity-button {
+    -fx-padding: 5 10; /* Buton içindeki boşluklar */
+    -fx-min-width: 30; /* Minimum genişlik */
+    -fx-font-size: 14;
+}
+
+.grocery-item .quantity-label {
+    -fx-min-width: 40; /* Minimum genişlik */
+    -fx-font-size: 14;
+    -fx-alignment: center; /* Etiketi ortala */
+}
+
+.grocery-item Button.add-to-cart-button {
+    -fx-padding: 8 16;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-min-width: 120; /* Minimum genişlik */
+    -fx-pref-width: 120; /* Tercih edilen genişlik */
+}
+
+
+/* Spinner'a split arrow ikonu eklemek için */
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+}
+
+#createAcc {
+    -fx-background-color: #1ACD56;
+    -fx-border-color: #FFFF;
+    -fx-border-radius: 15px;
+    -fx-text-fill: white; /* Set the text color when not hovering */
+}
+
+#createAcc:hover {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-text-fill: #1ACD56; /* Set the text color on hover */
+
+}
+
+#loginBtn{
+    -fx-background-color: white ;
+    -fx-text-fill: #1ACD56;
+    -fx-background-radius: 15px;
+}
+
+#loginBtn:hover{
+    -fx-background-color: #1BA54A;
+    -fx-text-fill: white; /* Set the text color on hover */
+}
+
+.registerInfos{
+    -fx-background-color: #1ACD56;
+    -fx-border-color: #FFFF;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+    -fx-border-radius: 15px;
+}
+
+#registerNow{
+    -fx-background-color: #1BA54A;
+    -fx-text-fill: white; /* Set the text color on hover */
+}
+
+#registerNow:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #1BA54A; /* Set the text color on hover */
+}
+
+#backBtn{
+    -fx-background-color: #1BA54A;
+    -fx-text-fill: white; /* Set the text color on hover */
+    -fx-background-radius: 15px;
+}
+
+#backBtn:hover{
+    -fx-background-color: #1ACD56;
+}
+
+.imagePane{
+    -fx-background-image: url("images/grocery.jpg");
+    -fx-background-size: cover;
+}
+
+.mainPageButtons{
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-background-color: #1ACD56 ;
+    -fx-border-color: white;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+}
+
+.mainPageButtons:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #1ACD56;
+}
+
+.navbar{
+    -fx-border-color: white;
+    -fx-border-radius: 0 0 15 15;
+    -fx-border-width: 2px;
+}
+
+#AboutBackground{
+    -fx-background-image: url("images/aboutBackground.png");
+    -fx-background-size: cover;
+}
+
+#contactBackground{
+    -fx-background-image: url("images/cumminacate.png");
+    -fx-background-size: 500 500;
+}
+
+#profileBackground{
+    -fx-background-image: url("images/profileBackground.png");
+    -fx-background-size: 500 500;
+}
+
+#addressBackground{
+    -fx-background-image: url("images/addressBackground.png");
+    -fx-background-size: 200 200;
+}
+
+.contactUsButtons{
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #1ACD56;
+    -fx-border-width: 2px;
+}
+
+#OwnerPageBackground{
+    -fx-background-image: url("images/OwnerPageBackground.png");
+    -fx-background-size: COVER;
+
+}
+
+#MyCartBackground{
+    -fx-background-image: url("images/MyCartBackground.png");
+    -fx-background-size: 300 300;
+}
+
+#HomeBackground{
+    -fx-background-image: url("images/homeBackground.png");
+    -fx-background-size: 300 300;
+}
+
+#carrierBackground{
+    -fx-background-image: url("images/carrier.png");
+    -fx-background-size: 300 300;}
